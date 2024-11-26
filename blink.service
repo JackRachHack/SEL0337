@@ -3,8 +3,8 @@ Description= Blink LED
 After=multi-user.target
 
 [Service]
-ExecStart=/home/sel/SEL0337/blink.sh
-#ExecStop=
+ExecStart=/usr/bin/python3/home/sel/SEL0337/blink.py
+ExecStop=/usr/bin/python3/home/sel/SEL0337/blink2.py
 user=SEL
 
 [Install]

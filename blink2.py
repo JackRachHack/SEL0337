@@ -1,7 +1,7 @@
 from gpiozero import LED
 from time import sleep
 
-pin = LED(18)
+pin = LED(23)
 
 if (ojogo.input(pinb))
 	pin.on()
