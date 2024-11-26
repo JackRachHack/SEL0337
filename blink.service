@@ -1,11 +1,21 @@
 [Unit]
 Description= Blink LED
+# Coloca uma tag no servico para que seja identificado no boot.
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/python3/home/sel/SEL0337/blink.py
-ExecStop=/usr/bin/python3/home/sel/SEL0337/blink2.py
+ExecStart=/home/sel/SEL0337/proxy.sh
+# Define um arquivo bash que serve como proxy para rodar um arquivo python
+# quando o sistema eh iniciado, ativado com enable. Eh possivel tambem ativar 
+# tal servico pelo terminal.
+ExecStop=/home/sel/SEL0337/proxy2.sh
+# Define um outro arquivo proxy, bash, para rodar o blink2.py, responsavel
+# por piscar o led verde 10 vezes. Isso acontece quando o servico e parado
 user=SEL
+# Usuario
 
 [Install]
 WantedBy=multi-user.target
+# Modo de instalacao?!
+# Nota: o arquivo .service que foi enviado para a pasta do sistema nao tem 
+# comentarios
