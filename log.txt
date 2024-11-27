@@ -1,0 +1,29 @@
+commit fb5e32cbfad2db12e907b1a27511b70592b44c13
+Author: JackRachHack <jacksonwagner2012@hotmail.com>
+Date:   Tue Nov 26 19:01:42 2024 +0000
+
+    commit final da pratica 5
+
+commit f81d03454fa8c286b0b0f0de7c1aea3ca718adec
+Author: JackRachHack <jacksonwagner2012@hotmail.com>
+Date:   Tue Nov 26 17:55:02 2024 +0000
+
+    Adicionando arquivo para quando parar e fechando a vers'ao definitiva dos .service e blink.py
+
+commit 767f1f8a94cca48264096f3a67558bc670c4209a
+Author: JackRachHack <jacksonwagner2012@hotmail.com>
+Date:   Tue Nov 26 17:38:33 2024 +0000
+
+    Colocando blink.py
+
+commit 19c143acc20bc06b583df55db14e4570fd7a9f9b
+Author: JackRachHack <jacksonwagner2012@hotmail.com>
+Date:   Mon Nov 25 15:07:13 2024 +0000
+
+    Adiantando a criacao desses arquivos
+
+commit 7f00f5f4f8e445ec1be2c8bfb706379acdf2aa06
+Author: JackRackHack <jacksonwagner2012@hotmail.com>
+Date:   Mon Nov 25 13:25:59 2024 +0000
+
+    Adicao basica
