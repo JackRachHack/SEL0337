@@ -1,0 +1,5 @@
+Como vai ser o projeto?
+
+Tarefa 1: leitura do sensor de proximidade (código já feito)
+
+Tarefa 2: monitorar valor lido pela task1 e enviar o dado para uma tabela no Google Sheets a cada espaço de tempo e/ou a cada mudança
