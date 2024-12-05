@@ -1,0 +1,44 @@
+function doGet(e) {
+  Logger.log(JSON.stringify(e)); // Log dos parâmetros recebidos
+  var result = 'Ok';
+
+  // Verificação de todos os parâmetros necessários
+  if (!e.parameter.value1 || !e.parameter.value2 || !e.parameter.value3 || !e.parameter.value4) {
+    result = 'Missing parameters';
+    return ContentService.createTextOutput(result);
+  }
+
+  var sheet_id = '1XwkTptFgv_V-6_6vchuTJK_KHGvcpSLmDIsw8T0Kl0E'; // ID da planilha
+  var spreadsheet = SpreadsheetApp.openById(sheet_id);
+  var sheet = spreadsheet.getSheetByName('Dados'); // Nome da planilha fixa
+
+  if (!sheet) {
+    result = 'Sheet not found';
+    return ContentService.createTextOutput(result);
+  }
+
+  var newRow = sheet.getLastRow() + 1; // Nova linha na planilha
+  var rowData = [];
+  
+  var d = new Date();
+  var formattedDate = Utilities.formatDate(d, Session.getScriptTimeZone(), "dd/MM/yyyy");
+  var formattedTime = Utilities.formatDate(d, Session.getScriptTimeZone(), "HH:mm:ss");
+  
+  rowData[0] = formattedDate;                  // Coluna A: Data
+  rowData[1] = formattedTime;                  // Coluna B: Hora
+  rowData[2] = stripQuotes(e.parameter.value1); // Coluna C: value1
+  rowData[3] = stripQuotes(e.parameter.value2); // Coluna D: value2
+  rowData[4] = stripQuotes(e.parameter.value3); // Coluna E: value3
+  rowData[5] = stripQuotes(e.parameter.value4); // Coluna F: value4
+  
+  Logger.log('Row data: ' + JSON.stringify(rowData));
+
+  sheet.getRange(newRow, 1, 1, rowData.length).setValues([rowData]);
+  sheet.getRange("G" + newRow).setValue(newRow); // Índice da nova linha na coluna G
+  
+  return ContentService.createTextOutput(result);
+}
+
+function stripQuotes(value) {
+  return value.replace(/^["']|["']$/g, ""); // Remove aspas do início e do fim
+}
