@@ -1,7 +1,7 @@
 #ifndef __TRIGGER_WIFI_H__
 #define __TRIGGER_WIFI_H__
 
-#include <ESP8266WiFi.h>
+#include <WiFi.h>
 #include <WiFiClientSecure.h>
 
 WiFiClientSecure client;
@@ -43,53 +43,9 @@ void WIFI_Connect()
       return;
     }
 
-    i = (i + 1) % max_networks; // Avança para a próxima rede ou reinicia para a primeira
+    i = (i + 1) % max_networks; // AvanÃ§a para a prÃ³xima rede ou reinicia para a primeira
   }
 }
 
 #endif
 
-
-//code without newer modifications
-
-//
-//#ifndef __TRIGGER_WIFI_H__
-//#define __TRIGGER_WIFI_H__
-//
-//#include <ESP8266WiFi.h>
-//#include <WiFiClientSecure.h>
-//
-//
-//WiFiClientSecure client;
-//
-//#define Debug_Serial_Mon
-//
-//
-//void WIFI_Connect(const char* wifi_id, const char *wifi_password)
-//{
-//  #ifdef Debug_Serial_Mon
-//	  Serial.print("connecting to ");
-//	  Serial.println(wifi_id);
-//  #endif
-//  
-//  WiFi.mode(WIFI_STA);
-//  WiFi.begin(wifi_id, wifi_password);
-//  
-//  while (WiFi.status() != WL_CONNECTED)
-//  {
-//    delay(250);
-//	Serial.print(".");
-//    digitalWrite (D5, HIGH);
-//    delay(250);
-//    digitalWrite (D5, LOW);
-//  }
-//  
-//  #ifdef Debug_Serial_Mon
-//	  Serial.println("");
-//	  Serial.println("WiFi connected");
-//	  Serial.println("IP address: ");
-//	  Serial.println(WiFi.localIP());
-//  #endif
-//}
-//
-//#endif
