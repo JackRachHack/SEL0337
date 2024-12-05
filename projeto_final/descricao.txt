@@ -1,5 +1,6 @@
 Como vai ser o projeto?
 
-Tarefa 1: leitura do sensor de proximidade (código já feito)
-
-Tarefa 2: monitorar valor lido pela task1 e enviar o dado para uma tabela no Google Sheets a cada espaço de tempo e/ou a cada mudança
+Tarefa 1: Selecionar modo de mudanca de valor RGB (usando uma daquelas chaves) 
+e uma quarta chave para ativar o envio para a tabela ou nao. Decidido qual usar,
+deve receber os valores e armazenar. Liga os dispositivos.
+Tarefa 2: Envia os dados rgb e os modos para a planilha a cada 10 segundos.
