@@ -12,7 +12,7 @@ const char* wifi_passwords[max_networks] = {"jack20wagner", "casabetao"}; // Cer
 #include "TRIGGER_GOOGLESHEETS.h"       // Arquivo da biblioteca para o Google Sheets
 
 char column_name_in_sheets[][8] = {"value1", "value2", "value3", "value4"}; // Adicione mais "valueX" a medida que quiser modificar a quantidade de parâmetros (mudanças no Apps Script necessárias)
-String Sheets_GAS_ID = "AKfycbxcb6JL3RXZM0qGb-ND8hVWrOcMBEeWQXVOkJ5fYTSL_x3xPANyYYAbR5FBBJ1jpldO"; // Deployment ID da vesão 7 do Apps Script que recebe dados para a planilha (tirado na opção "manage deployments")
+String Sheets_GAS_ID = "AKfycbwN3651-nx6dKNLBjllL98i62__oIwyJP6sFfJbLtI"; // Deployment ID da vesão 7 do Apps Script que recebe dados para a planilha (tirado na opção "manage deployments")
 int No_of_Parameters = 4;                                                               
 /*********************************************/
 
