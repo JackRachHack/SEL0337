@@ -3,8 +3,8 @@
 
 /*********Definições do Wifi***********/
 const int max_networks = 2; // Número máximo de redes disponíveis para uso no local, a fim de garantir redundância para conexão Wi-Fi
-const char* wifi_ssids[max_networks] = {"jacksonhotspot", "biscoito_2.4"}; // Adicione os dados das redes nestes dois vetores
-const char* wifi_passwords[max_networks] = {"jack20wagner", "casabetao"}; // Certifique-se de que tiver X redes, terão X IDs e X senhas
+const char* wifi_ssids[max_networks] = {"jacksonhotspot", "LabMicros"}; // Adicione os dados das redes nestes dois vetores
+const char* wifi_passwords[max_networks] = {"jack20wagner", "seluspeesc@"}; // Certifique-se de que tiver X redes, terão X IDs e X senhas
 /*********************************************/
 
 /**********Definições Google Sheets***********/
