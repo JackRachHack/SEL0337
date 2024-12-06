@@ -21,7 +21,8 @@ const char* host = "script.google.com";
 const int httpsPort = 443;
 
 char Sensor_Values[4][8];
-const char* fingerprint = "46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F EF F6"; //46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F EF F6  (old value, return it to the string if there is error with the certificate)
+
+const char* fingerprint = "c143c8b3969f9d8f3b0fbe76c74676087791d171ba08997ebab01a6c8314d0cf"; //46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F EF F6  (old value, return it to the string if there is error with the certificate)
 String GAS_ID; // New one 4039749d3ad697ab3d3341c5074ba9649645f16790c084a48b4381b989514d4d
 int Count;
 

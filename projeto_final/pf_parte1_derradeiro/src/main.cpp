@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 // Define pino do LED (troque para D4 se quiser usar o LED interno do NodeMCU), D5 é um LED externo.
 #define LEDpin 2
 
@@ -83,11 +81,13 @@ void loop()
 
         if (!falha){ // Se não falhou mantém Led pagado
           digitalWrite (LEDpin, LOW);
-          delay(5000); // Espera 30 segundos para enviar o próximo dado
+          delay(30000); // Espera 30 segundos para enviar o próximo dado
         } else {    // Se falhou, acende o Led 
           digitalWrite (LEDpin, HIGH);
         }
-        //vetRx[3] = 0; // Restaura um valor neutro ao identificador de dispositivo para inibir reentrada desnecessária
+
+        delay(30000);
+        //  vetRx[3] = 0; // Restaura um valor neutro ao identificador de dispositivo para inibir reentrada desnecessária
     }
     control = 1;
 }
