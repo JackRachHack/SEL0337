@@ -48,43 +48,50 @@ def update_color():
 # Função para alternar o valor do toggle e atualizar os valores de value (RGB)
 def toggleS():
     toggleSvar.set(1 - toggleSvar.get())  # Inverter o valor binário de toggleB
-    bus.write_i2c_block_data(addr, 0x00, [0,toggleSvar.get()])
+    value = toggleSvar.get()
+    bus.write_i2c_block_data(addr, 0x00, [0,value])
 
 def toggle_red():
     toggleR.set(1 - toggleR.get())  # Inverter o valor binário de toggleR
     update_value()
-    bus.write_i2c_block_data(addr, 0x00, [1,toggleR.get()])
+    value = toggleR.get()
+    bus.write_i2c_block_data(addr, 0x00, [1,value])
 
 def toggle_green():
     toggleG.set(1 - toggleG.get())  # Inverter o valor binário de toggleG
     update_value()
-    bus.write_i2c_block_data(addr, 0x00, [2,toggleG.get()])
+    value = toggleG.get()
+    bus.write_i2c_block_data(addr, 0x00, [2,value])
 
 def toggle_blue():
     toggleB.set(1 - toggleB.get())  # Inverter o valor binário de toggleB
     update_value()
-    bus.write_i2c_block_data(addr, 0x00, [3,toggleB.get()])
+    value = toggleB.get()
+    bus.write_i2c_block_data(addr, 0x00, [3,value])
 
 # Função para atualizar os valores das cores (Red, Green, Blue)
 def update_value():
     # Se toggleR for 1, usa sliderR; caso contrário, usa potR
     if toggleR.get() == 1:
         valueR.set(sliderR.get())
-        bus.write_i2c_block_data(addr, 0x00, [4,sliderR.get()])
+        value = sliderR.get()
+        bus.write_i2c_block_data(addr, 0x00, [4, value])
     else:
         valueR.set(potR)
 
     # Se toggleG for 1, usa sliderG; caso contrário, usa potG
     if toggleG.get() == 1:
         valueG.set(sliderG.get())
-        bus.write_i2c_block_data(addr, 0x00, [5,sliderG.get()])
+        value = sliderG.get()
+        bus.write_i2c_block_data(addr, 0x00, [5,value])
     else:
         valueG.set(potG)
 
     # Se toggleB for 1, usa sliderB; caso contrário, usa potB
     if toggleB.get() == 1:
         valueB.set(sliderB.get())
-        bus.write_i2c_block_data(addr, 0x00, [6,sliderB.get()])
+        value = sliderB.get()
+        bus.write_i2c_block_data(addr, 0x00, [6,value])
     else:
         valueB.set(potB)
 
