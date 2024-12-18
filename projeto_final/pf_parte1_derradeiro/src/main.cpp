@@ -336,8 +336,8 @@ void buttons_update() {
  }
 
 // Just some sad debbugins
-int aiai = ((currentTime - lastDebounceTimes[2]) > DEBOUNCE_DELAY);
-int aiaii = digitalRead(TOG_SEND);
+//int aiai = ((currentTime - lastDebounceTimes[2]) > DEBOUNCE_DELAY);
+//int aiaii = digitalRead(TOG_SEND);
 
 
 printf ("%d -- %d\n", aiai, aiaii);
@@ -369,20 +369,20 @@ void leds() {
    int value = (toggleStates[i] == 0) ? (nobValues[i] = nob_read(nobPins[i])) : (nobValues[i] = sliderValues[i]);
 
    // Send the pot value through i2c if their are being used
-   if (toggleStates[i] == 0) {
+   //if (toggleStates[i] == 0) {
 
     // Sending the toggles RGB
-    Wire.beginTransmission(slaveAddress);
-    Wire.write(i+1);       
-    Wire.write(1);               
-    Wire.endTransmission();  
+    //Wire.beginTransmission(slaveAddress);
+    //Wire.write(i+1);       
+    //Wire.write(1);               
+    //Wire.endTransmission();  
 
     // Sending the RGB values
-    Wire.beginTransmission(slaveAddress);
-    Wire.write(i+4);       
-    Wire.write(value);               
-    Wire.endTransmission();     
-   }
+    //Wire.beginTransmission(slaveAddress);
+    //Wire.write(i+4);       
+    //Wire.write(value);               
+    //Wire.endTransmission();     
+   //}
  
    // Stores the rgb values used (from the nobs or the sliders)
    rgbValues[i] = value;
