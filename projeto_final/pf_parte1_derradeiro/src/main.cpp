@@ -8,7 +8,7 @@
 
 void vTask1();                   // Protótipo da função da task 1 ()
 void vTask2();                   // Protótipo da função da task 2 ()
-void vTask3();                   // Protótipo da função da task 3 ()
+//void vTask3();                   // Protótipo da função da task 3 ()
 
 
 /*-----------------------FreeRTOS Prep END-------------------------*/
@@ -114,8 +114,8 @@ int sliderValues [3] = {0, 0, 0};
 
 
 // Function declarations:
-void wifi_turnon ();
-void wifi_turnoff ();
+//void wifi_turnon ();
+//void wifi_turnoff ();
 void wifiproblems_handler();
 void send_to_sheets();
 
